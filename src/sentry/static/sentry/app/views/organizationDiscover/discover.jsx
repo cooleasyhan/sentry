@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import moment from 'moment';
+import styled from 'react-emotion';
+import {Flex} from 'grid-emotion';
 import {browserHistory} from 'react-router';
 
 import {addErrorMessage, addSuccessMessage} from 'app/actionCreators/indicator';
@@ -8,6 +10,7 @@ import {getUtcDateString} from 'app/utils/dates';
 import {updateProjects} from 'app/actionCreators/globalSelection';
 import {t, tct} from 'app/locale';
 
+import AlertLink from 'app/components/alertLink';
 import HeaderItemPosition from 'app/components/organizations/headerItemPosition';
 import HeaderSeparator from 'app/components/organizations/headerSeparator';
 import MultipleProjectSelector from 'app/components/organizations/multipleProjectSelector';
@@ -355,6 +358,15 @@ export default class OrganizationDiscover extends React.Component {
                 />
               </QueryPanel>
             )}
+          <AlertBox>
+            <AlertLink
+              priority="default"
+              icon="icon-docs"
+              href="https://docs.sentry.io/product/discover/"
+            >
+              Discover documentation
+            </AlertLink>
+          </AlertBox>
         </Sidebar>
         <DiscoverHeader>
           <HeaderItemPosition>
@@ -410,3 +422,7 @@ export default class OrganizationDiscover extends React.Component {
     );
   }
 }
+
+const AlertBox = styled(Flex)`
+  align-self: center;
+`;
