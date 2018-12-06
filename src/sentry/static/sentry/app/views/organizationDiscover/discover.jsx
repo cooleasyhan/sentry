@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import moment from 'moment';
 import styled from 'react-emotion';
-import {Flex} from 'grid-emotion';
+import {Box} from 'grid-emotion';
 import {browserHistory} from 'react-router';
 
 import {addErrorMessage, addSuccessMessage} from 'app/actionCreators/indicator';
@@ -363,6 +363,7 @@ export default class OrganizationDiscover extends React.Component {
               priority="default"
               icon="icon-docs"
               href="https://docs.sentry.io/product/discover/"
+              size="small"
             >
               Discover documentation
             </AlertLink>
@@ -423,6 +424,6 @@ export default class OrganizationDiscover extends React.Component {
   }
 }
 
-const AlertBox = styled(Flex)`
-  align-self: center;
+const AlertBox = styled(Box)`
+  margin: 0 20px;
 `;
