@@ -92,6 +92,10 @@ export const Sidebar = styled(props => (
   padding-top: ${HEADER_HEIGHT}px;
 `;
 
+export const AlertBox = styled(Box)`
+  margin: 0 20px;
+`;
+
 export const Body = styled(Flex)`
   flex: 1;
   flex-direction: column;

@@ -1,8 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import moment from 'moment';
-import styled from 'react-emotion';
-import {Box} from 'grid-emotion';
 import {browserHistory} from 'react-router';
 
 import {addErrorMessage, addSuccessMessage} from 'app/actionCreators/indicator';
@@ -45,6 +43,7 @@ import {
   Sidebar,
   SidebarTabs,
   SavedQueryWrapper,
+  AlertBox,
 } from './styles';
 
 import {trackQuery} from './analytics';
@@ -423,7 +422,3 @@ export default class OrganizationDiscover extends React.Component {
     );
   }
 }
-
-const AlertBox = styled(Box)`
-  margin: 0 20px;
-`;
